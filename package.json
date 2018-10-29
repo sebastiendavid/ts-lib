@@ -1,0 +1,27 @@
+{
+  "name": "react-app-ts",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm run clean && npm run tsc && npm run css",
+    "clean": "rm -rf dist",
+    "css": "copyfiles -u 2 'src/lib/**/*.css' dist",
+    "lint": "tslint --project tsconfig.json -t stylish",
+    "start": "react-scripts-ts start",
+    "test": "CI=true react-scripts-ts test --env=jsdom",
+    "tsc": "tsc --project tsconfig.prod.json"
+  },
+  "devDependencies": {
+    "@types/jest": "~23.3.7",
+    "@types/node": "~8.10.36",
+    "@types/react": "~16.4.18",
+    "@types/react-dom": "~16.0.9",
+    "@types/react-test-renderer": "~16.0.3",
+    "copyfiles": "~2.1.0",
+    "react": "~16.6.0",
+    "react-dom": "~16.6.0",
+    "react-scripts-ts": "~3.1.0",
+    "react-test-renderer": "~16.6.0",
+    "typescript": "~3.1.3"
+  }
+}
